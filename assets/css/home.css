@@ -1,0 +1,88 @@
+#body{
+    margin: 5px;
+}
+/* page heading */
+#page-heading{
+    text-align: center;
+    color: crimson;
+    size: 20px;
+    font-style: normal;
+}
+.desc-decor{
+    line-height: 30px;
+    width: 450px;
+}
+#div1{
+    line-height: 25px;
+}
+#div2{
+    line-height: 50px;
+}
+
+
+#submit-button{
+    color:white;
+    background-color: rgb(60, 119, 2);
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+}
+#submit-button:hover{
+    background-color:rgb(88, 168, 7) ;
+}
+
+#delete-button{
+    background-color: rgb(172, 35, 35);
+    border-radius: 4px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+
+
+}
+#delete-button:hover{
+    background-color: rgb(236, 51, 51);
+}
+button a:link{
+    color: white;
+}
+button a{
+    text-decoration: none;
+}
+#task-list-heading{
+    margin-left: 40rem;
+    
+}
+
+.one-task{
+    background-color: rgb(240, 233, 233);
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 10px;
+    padding: 8px;
+}
+.one-task:hover{
+    background-color: rgb(194, 189, 189);
+    margin-right: 20rem;
+   
+}
+.one-task p:hover{
+
+color:rgb(102, 26, 26)
+}
+.task-details{
+    margin-left: 5rem;
+    
+}
+#task-category{
+    background-color: rgb(73, 73, 150);
+    margin-right: 30rem;
+    margin-left: 5rem;
+    
+}
+#task-category:hover{
+    background-color: rgb(20, 20, 95);
+}
+#task-category p{
+    color:white;
+}

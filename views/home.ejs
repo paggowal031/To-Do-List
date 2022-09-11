@@ -1,0 +1,85 @@
+<html>
+    <head>
+     <title>
+         <%= locals.title%>
+     </title>
+
+      <!-- Place your kit's code here -->
+      <script src="https://kit.fontawesome.com/6c42c1abc7.js" crossorigin="anonymous"></script>
+      <!-- our css should be below all other stylesso that we can override -->
+      <link rel="stylesheet" href="/css/home.css"> 
+    </head>
+    <body>
+
+        <h1 id="page-heading">
+            <i class="fas fa-tasks"></i>
+            TO DO APP
+        </h1> 
+
+       <div >
+           <form action="/create-task" method="POST">
+               <div id="div1">
+               <label for="description" >Description</label>
+               </div>
+               <div>
+               <input name="description" type="text" placeholder="What do you need to do?" required class="desc-decor" >
+               </div>
+               <hr>
+               <div id="div2">
+                <label for="category" >Category</label>
+                       <select name="category" required >
+                           <option value="Personal">Personal</option>
+                           <option value="School">School</option>
+                           <option value="Work">Work</option>
+                           <option value="Cleaning">Cleaning</option>
+                           <option values="other" selected>Other</option>
+                       </select>
+                       
+               <label for="date" >Due Date</label>
+               <input name="date" type="date" placeholder="dd/mm/yyyy" required >
+               </div>
+               <hr>
+                        <div id="div3">
+                             <button type="submit" name="add-task-button" id="submit-button">
+                                <i class="fas fa-plus"></i>
+                                 Add Task
+                            </button>
+                    
+                        
+                        </div>
+                        <hr>
+             </form>
+        </div> 
+
+
+
+  <h1 id="task-list-heading">Task List</h1>
+
+        <div>
+            
+                <% for(let i of task_list){%>
+
+                    <div class="one-task">
+                    <p class="task-details"> <%=i.description%> </p>
+                    <div id="task-category">
+                    <p class="task-details"> <%=i.category%> </p>
+                    </div>
+                    <p class="task-details"> <%=i.date%> </p>  
+                 <div class="task-details">
+                   
+                    <button type="button" name="delete-task-button" id="delete-button"  >
+                        <a href="/delete-task/?id=<%=i._id%>" > 
+                        <i class="far fa-trash-alt"></i>
+                           Delete Task
+                        </a>
+                    </button>
+
+                 </div>
+                </div>
+               <% }%>
+            
+        </div>
+        
+        
+    </body> 
+</html>
